@@ -58,7 +58,7 @@ class Owner
      Cat.all.each do |cat|
       if cat.owner == self 
         cat.mood = "nervous"
-        binding.pry 
+        #binding.pry 
       end
     end
    end

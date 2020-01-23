@@ -60,7 +60,6 @@ class Owner
      Cat.all.each do |cat|
       if cat.owner == self 
         cat.mood = "nervous"
-        Cat.all.pop(cat)
         #binding.pry 
       end
     end

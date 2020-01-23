@@ -51,13 +51,13 @@ class Owner
   def sell_pets
     Dog.all.each do |dog|
     if dog.owner == self 
-      dog.mood == "nervous"
+      dog.mood = "nervous"
       
     end
   end
      Cat.all.each do |cat|
       if cat.owner == self 
-        cat.mood == "nervous"
+        cat.mood = "nervous"
         binding.pry 
       end
     end

@@ -22,11 +22,11 @@ class Owner
   end
   
   def cats 
-    Cats.all.select { |i| i.owner == self}
+    Cat.all.select { |i| i.owner == self}
   end
   
   def dogs
-    Dogs.all.select { |i| i.owner == self}
+    Dog.all.select { |i| i.owner == self}
   end
   
   def buy_cat(cat)

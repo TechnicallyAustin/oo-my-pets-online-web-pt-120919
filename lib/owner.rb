@@ -59,18 +59,20 @@ class Owner
     Dog.all.each do |dog|
     if dog.owner == self 
       dog.mood = "nervous"
+      dog.owner = nil 
     end
     end
+  
   
   
      Cat.all.each do |cat|
       if cat.owner == self 
         cat.mood = "nervous"
+        cat.owner = nil 
         #binding.pry 
       end
     end
-  Dog.all.delete { |dog| dog.owner == self }
-  Cat.all.delete { |cat| cat.owner == self }
+  
    end
   
   def list_pets

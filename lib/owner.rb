@@ -11,7 +11,6 @@ class Owner
 
   def say_species
     @species
-    binding.pry
   end
   
   def self.all

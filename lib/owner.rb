@@ -39,12 +39,12 @@ class Owner
     dog.owner = self
   end
   
-  def walk_dogs(dog)
-    dog.mood = "happy"
+  def walk_dogs
+    dogs.mood = "happy"
   end
   
-  def feed_cats(cat)
-    cat.mood = "happy"
+  def feed_cats
+    cats.mood = "happy"
   end
   
   def sell_pets

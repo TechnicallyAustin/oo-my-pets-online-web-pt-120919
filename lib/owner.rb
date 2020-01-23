@@ -76,18 +76,22 @@ class Owner
    end
   
   def list_pets
-    doggies = Dog.all.detect { |dog| dog.owner == self}
-    kitties = Cat.all.detect { |cat| cat.owner == self}
+    @dog_count = 0 
+    @cat_count = 0 
+    Dog.all.each do |dog|
+      if dog.owner == self
+        dog_count += 1
+      end
+    end
     
-    "I have #{doggies.length} dog(s) and #{kitties.length} cat(s)."
-    binding.pry 
+    Cat.all.each do |cat|
+      if cat.owner == self
+        cat_count += 1 
+      end
+    end
+    
+    "I have #{@dog_count} dog(s) and #{@cat_count} cat(s)."
   end
-  
-  
-  
-  
-  
-  
   
   def self.reset_all
     @@all =[]

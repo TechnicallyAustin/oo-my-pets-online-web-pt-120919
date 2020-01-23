@@ -80,6 +80,7 @@ class Owner
     kitties = Cat.all.detect { |cat| cat.owner == self}
     
     "I have #{doggies.length} dog(s) and #{kitties.length} cat(s)."
+    binding.pry 
   end
   
   

@@ -61,7 +61,6 @@ class Owner
       dog.mood = "nervous"
     end
     end
-  Dog.all.delete_if { |dog| dog.owner == self }
   
   
      Cat.all.each do |cat|
@@ -70,7 +69,8 @@ class Owner
         #binding.pry 
       end
     end
-  Cat.all.delete_if { |cat| cat.owner == self }
+  Dog.all.delete { |dog| dog.owner == self }
+  Cat.all.delete { |cat| cat.owner == self }
    end
   
   def list_pets

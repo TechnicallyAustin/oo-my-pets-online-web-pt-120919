@@ -22,7 +22,43 @@ class Owner
   end
   
   def cats 
-    Cats.all.selec { |i|
+    Cats.all.select { |i| i.owner == self}
+  end
+  
+  def dogs
+    Dogs.all.select { |i| i.owner == self}
+  end
+  
+  def buy_cat(cat)
+    cat = Cat.new(name, self, mood)
+    cat.owner = self
+    Cat.all << cat 
+  end
+  
+  def buy_dog(dog)
+    dog = Dog.new(name, self, mood)
+    dog.owner = self
+    Dog.all << dog 
+  end
+  
+  def walk_dogs(dog)
+    dog.mood = "happy"
+  end
+  
+  def feed_cats(cat)
+    cat.mood = "happy"
+  end
+  
+  def sell_pets
+    Dog.all.delete_if { |dog| dog.owner == self }
+    Cat.all.delete_if { |cat| cat.owner == self }
+  end
+  
+  def list_pets
+    Dog.all.detect { |dog| p dog.name }
+    Cat.all.detect { |cat| p cat.name }
+  end
+    
   
   
   

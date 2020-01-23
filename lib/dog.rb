@@ -4,7 +4,7 @@ class Dog
   attr_reader:name
   def initialize(name, owner, mood = "nervous")
     @name = name 
-    @owner = owner
+    self.owner = owner
     @mood = mood 
     @@all << self 
   end

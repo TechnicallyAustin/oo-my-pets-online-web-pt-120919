@@ -52,22 +52,26 @@ class Owner
     Dog.all.each do |dog|
     if dog.owner == self 
       dog.mood = "nervous"
-      
+      Dog.all.pop(dog)
     end
   end
      Cat.all.each do |cat|
       if cat.owner == self 
         cat.mood = "nervous"
+        Cat.all.pop(cat)
         #binding.pry 
       end
     end
+    
+    
    end
   
   def list_pets
     Dog.all.detect { |dog| p dog.name }
     Cat.all.detect { |cat| p cat.name }
   end
-    
+
+  
   
   
   

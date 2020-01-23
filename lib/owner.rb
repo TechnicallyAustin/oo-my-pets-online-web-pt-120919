@@ -22,7 +22,7 @@ class Owner
   end
   
   def cats 
-    Cats.all
+    Cats.all.selec { |i|
   
   
   

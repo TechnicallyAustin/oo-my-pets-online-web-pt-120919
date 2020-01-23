@@ -8,10 +8,7 @@ class Owner
     @species = species 
     @@all << self 
   end
-  def species=(human)
-    @species = "human"
-  end
-  
+
   def say_species
     @species
     binding.pry

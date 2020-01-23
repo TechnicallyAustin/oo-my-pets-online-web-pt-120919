@@ -21,6 +21,13 @@ class Owner
     @@all.count
   end
   
+  def cats 
+    Cats.all
+  
+  
+  
+  
+  
   
   def self.reset_all
     @@all =[]

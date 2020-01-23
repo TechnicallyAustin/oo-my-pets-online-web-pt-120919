@@ -8,6 +8,10 @@ class Owner
     @@all << self 
   end
   
+  def say_species
+    self.species
+  end
+  
   def self.all
     @@all
   end
@@ -15,6 +19,7 @@ class Owner
   def self.count 
     @@all.count
   end
+  
   
   def self.reset_all
     self.all.delete_if { |i| i == self }

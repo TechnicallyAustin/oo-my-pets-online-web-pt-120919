@@ -40,12 +40,19 @@ class Owner
   end
   
   def walk_dogs
-    dog.mood = "happy"
-    binding.pry 
+    Dog.all.each do |dog|
+      if dog.owner == self
+        dog.mood = "happy"
+      end
+    end
   end
   
   def feed_cats
-    self.cats= "happy"
+    Cat.all.each do |cat| 
+      if cat.owner == self
+        cat.mood = "happy"
+      end
+    end
   end
   
   def sell_pets

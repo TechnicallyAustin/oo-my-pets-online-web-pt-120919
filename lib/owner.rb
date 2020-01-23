@@ -79,7 +79,7 @@ class Owner
     doggies = Dog.all.detect { |dog| dog.owner == self}
     kitties = Cat.all.detect { |cat| cat.owner == self}
     
-    "I have #{doggies.count} dog(s) and #{kitties.count} cat(s)."
+    "I have #{doggies.length} dog(s) and #{kitties.length} cat(s)."
   end
   
   

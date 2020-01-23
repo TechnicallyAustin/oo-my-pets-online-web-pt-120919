@@ -76,8 +76,10 @@ class Owner
    end
   
   def list_pets
-    dog_count = self.dogs 
-    cat_count = self.cats
+    doggies = Dog.all.detect { |dog| dog.owner == self}
+    kitties = Cat.all.detect { |cat| cat.owner == self}
+    
+    "I have #{doggies.count} dog(s) and #{kitties.count} cat(s)."
   end
   
   

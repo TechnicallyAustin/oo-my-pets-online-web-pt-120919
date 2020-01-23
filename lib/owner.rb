@@ -53,10 +53,12 @@ class Owner
     if dog.owner == self 
       dog.mood == "nervous"
     end
+  end
      Cat.all.each do |cat|
       if cat.owner == self 
         cat.mood == "nervous"
       end
+    end
    end
   
   def list_pets

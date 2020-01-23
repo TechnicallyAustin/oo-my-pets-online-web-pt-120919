@@ -80,13 +80,13 @@ class Owner
     @cat_count = 0 
     Dog.all.each do |dog|
       if dog.owner == self
-        dog_count += 1
+        @dog_count += 1
       end
     end
     
     Cat.all.each do |cat|
       if cat.owner == self
-        cat_count += 1 
+        @cat_count += 1 
       end
     end
     

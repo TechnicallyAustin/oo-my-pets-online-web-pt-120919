@@ -52,12 +52,13 @@ class Owner
     Dog.all.each do |dog|
     if dog.owner == self 
       dog.mood == "nervous"
-      binding.pry 
+      
     end
   end
      Cat.all.each do |cat|
       if cat.owner == self 
         cat.mood == "nervous"
+        binding.pry 
       end
     end
    end

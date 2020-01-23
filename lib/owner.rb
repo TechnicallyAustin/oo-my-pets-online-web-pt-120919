@@ -9,7 +9,7 @@ class Owner
   end
   
   def say_species
-    self.species
+    @species
   end
   
   def self.all
@@ -22,7 +22,7 @@ class Owner
   
   
   def self.reset_all
-    self.all.delete_if { |i| i == self }
+    @@all =[]
   end
   
   

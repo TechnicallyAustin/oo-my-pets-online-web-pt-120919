@@ -90,7 +90,7 @@ class Owner
       end
     end
     
-    "I have #{@dog_count} dog(s) and #{@cat_count} cat(s)."
+    "I have #{@dog_count} dog(s), and #{@cat_count} cat(s)."
   end
   
   def self.reset_all

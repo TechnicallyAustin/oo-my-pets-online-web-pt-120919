@@ -49,9 +49,15 @@ class Owner
   end
   
   def sell_pets
-    Dog.all.delete_if { |dog| dog.owner == self }
-    Cat.all.delete_if { |cat| cat.owner == self }
-  end
+    Dog.all.each do |dog|
+    if dog.owner == self 
+      dog.mood == "nervous"
+    end
+     Cat.all.each do |cat|
+      if cat.owner == self 
+        cat.mood == "nervous"
+      end
+   end
   
   def list_pets
     Dog.all.detect { |dog| p dog.name }
